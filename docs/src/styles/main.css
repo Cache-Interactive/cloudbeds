@@ -38,6 +38,7 @@ h3 {
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 ul li {
@@ -77,6 +78,6 @@ div#applications-menu-container h2:after {
 #overview img, #applications img {
     border-radius: 15px;
     box-shadow: 0px 2px 8px 1px rgb(165 158 143 / 40%);
-    width: 100%;
-    max-width: 525px;
+    width: auto;
+    max-width: 100%;
 }
