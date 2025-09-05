@@ -70,6 +70,6 @@ div#applications-menu-container h2:after {
     width: 16px;
     height: 16px;
     display: inline-block;
-    background: url(docs/src/images/chevron-right.svg) center/contain no-repeat;
+    background: url(docs/src/images/chevron-right-regular-full.svg) center/contain no-repeat;
     margin: 0 15px;
 }
