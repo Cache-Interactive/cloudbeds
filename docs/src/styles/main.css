@@ -20,3 +20,12 @@ h2, p.callout {
 h3 {
     font-size: 1.15em;
 }
+
+.wrap {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.cf {
+    zoom: 1;
+}
