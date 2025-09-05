@@ -88,7 +88,7 @@ nav#main-menu {
     transform: rotate(90deg);
 }
 
-h2.divider-title, div#applications-menu-container  {
+h2.divider-title {
     margin-bottom: 100px;
     position: relative;
 }
@@ -111,4 +111,14 @@ h2.divider-title span, div#applications-menu-container > div {
     position: relative;
     z-index: 1;
     display: inline-block;
+}
+
+div#applications-menu-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: #f0e8d5;
+    padding: 20px 15px;
+    margin: -20px -15px;
+    overflow: hidden;
 }
