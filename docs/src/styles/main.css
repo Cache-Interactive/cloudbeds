@@ -96,7 +96,7 @@ h2.divider-title {
 h2.divider-title:after, div#applications-menu-container:after {
     content: '';
     position: absolute;
-    left: 0;
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     display: block;
