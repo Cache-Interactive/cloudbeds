@@ -81,3 +81,34 @@ div#applications-menu-container h2:after {
     width: auto;
     max-width: 100%;
 }
+
+nav#main-menu {
+    position: absolute;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+h2.divider-title, div#applications-menu-container  {
+    margin-bottom: 100px;
+    position: relative;
+}
+
+h2.divider-title:after, div#applications-menu-container:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #1e1e1e;
+}
+
+h2.divider-title span, div#applications-menu-container > div {
+    background: #f0e8d5;
+    padding-right: 30px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
