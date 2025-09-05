@@ -11,61 +11,112 @@
     </head>
 
     <body>
-        <nav id="main-menu">
-            <ul>
-                <li>Overview</li>
-                <li>Applications</li>
-                <li>Github</li>
-                <li>Connect</li>
-            </ul>
-        </nav>
+        <header>
+            <h1><img src="docs/src/images/CACHE-logo.svg" alt="CACHE"></h1>
+            <nav id="main-menu" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#applications"></a>Applications</a></li>
+                    <li><a href="#github"></a>Github</a></li>
+                    <li><a href="#connect"></a>Connect</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <main id="main">
             <article>
                 <section id="hero">
+                    <h1>Display data from your Cloudbeds property within your WordPress site</h1>
+                    <p>The Cloudbeds plugin allows users to connect their Cloudbeds data to their WordPress site using the Cloudbeds API.</p>
+                    <img id="lava-lamp" src="docs/src/images/CACHE-lava-lamp.png" alt="">
                 </section>
 
                 <section id="overview">
+                    <h2 class="divider-title">Overview</h2>
                     <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <p>Sync information between Cloudbeds and your WordPress site to provide up to date information for your guests and even create a custom booking solution. The possibilities are endless!</p>
+                            <p>See below for some key values available to use once your site is connected.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="docs/src/images/booking.jpg" alt="">
+                        </div>
                     </div>
                 </section>
 
                 <section id="applications">
+                    <div id="applications-menu-container">
+                        <h2>Applications</h2>
+                        <nav id="applications-menu" aria-label="Applications navigation">
+                            <ul>
+                                <li><a href="#availability-calendar">Availability Calendar</a></li>
+                                <li><a href="#currency">Currency</a></li>
+                                <li><a href="#rate">Rate</a></li>
+                                <li><a href="#room-data">Room Data</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
                     <div id="availability-calendar">
                         <div class="row">
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <h3>Availability Calendar</h3>
+                                <p>Showcase availability for your entire property, or a snigle room type, so customers can see when your property is fully booked or when availability doesn't meet minimum stay requirements configured via Cloudbeds.</p>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="docs/src/images/availability-calendar.jpg" alt="">
+                            </div>
                         </div>
                     </div>
 
                     <div id="currency">
                         <div class="row">
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <h3>Currency</h3>
+                                <p>Showcase the default currency that your venue has set up in your Cloudbeds account or allow users to specify a currency for you, then check if it is an accepted form of currency, before using it to grab pricing from Cloudbeds.</p>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="docs/src/images/currency.jpg" alt="">
+                            </div>
                         </div>
                     </div>
 
                     <div id="rate">
                         <div class="row">
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <h3>Rate</h3>
+                                <p>Display estimated pricing for a user's selected stay. You have the ability to customize how pricing is displayed for each room or property, factoring in changes based on size of party, additional fees, and more.</p>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="docs/src/images/rate.jpg" alt="">
+                            </div>
                         </div>
                     </div>
 
                     <div id="room-data">
                         <div class="row">
-                            <div class="col-md-5"></div>
-                            <div class="col-md-7"></div>
+                            <div class="col-md-5">
+                                <h3>Room Data</h3>
+                                <p>Display live data from Cloudbeds on your booking page to show customers important values such as availability, maximum occupancy, and minimum nights allowed for their selected stay. Showcase any taxes and fees that are added on to keep customers informed of the full cost of their stay.</p>
+                                <p>This also allows for you to limit your results to a singular location or room type before providing availability so your guest only receives information that is relevant to their search.</p>
+                            </div>
+                            <div class="col-md-7">
+                                <img src="docs/src/images/room-data.jpg" alt="">
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <section id="github">
+                    <h2 class="divider-title">Github</h2>
                     <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <img src="docs/src/images/GitHub-logo.svg" alt="GitHub">
+                        </div>
+                        <div class="col-md-6">
+                            <p>Visit the GitHub repository page for more details and to view and download the plugin files.</p>
+                            <a href="" target="_blank">Check out on GitHub</a>
+                        </div>
                     </div>
                 </section>
             </article>
@@ -73,8 +124,13 @@
 
         <footer>
             <div class="row">
-                <div class="col-md-5"></div>
-                <div class="col-md-7"></div>
+                <div class="col-md-5">
+                    <h2 class="h1">Questions?</h2>
+                </div>
+                <div class="col-md-7">
+                    <p>For integration, customizations, and design inquiries, connect with <a href="https://cacheinteractive.com/contact-us/" target="_blank">CACHE</a>.</p>
+                    <p>Read about the plugin further on <a href="/" target="_blank">CACHE's blog</a>.</p>
+                </div>
             </div>
         </footer>
 
