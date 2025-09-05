@@ -3,10 +3,15 @@ body {
     color: #1e1e1e;
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 400;
+    padding: 60px 15px;
 }
 
 h1, h2, h3 {
     font-weight: 600;
+}
+
+h1, .h1 {
+    font-size: 2.75em;
 }
 
 h2 {
@@ -28,4 +33,43 @@ h3 {
 
 .cf {
     zoom: 1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li:not(:last-child) {
+    margin-right: 30px;
+}
+
+ul li a {
+    color: #1e1e1e;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+section, section#applications .wrap .wrap {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div#applications-menu-container h2, nav#applications-menu {
+    display: inline-block;
+}
+
+div#applications-menu-container h2:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(docs/src/images/chevron-right.svg) center/contain no-repeat;
+    margin: 0 15px;
 }
