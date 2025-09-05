@@ -54,7 +54,7 @@ ul li a {
     text-transform: uppercase;
 }
 
-section, section#applications .wrap .wrap {
+section, section#applications .wrap .applications-section {
     min-height: 85vh;
     display: flex;
     align-items: center;
