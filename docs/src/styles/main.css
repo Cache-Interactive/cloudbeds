@@ -18,7 +18,7 @@ h3 {
     text-transform: uppercase;
 }
 
-h3, p.callout {
+h3, .callout {
     font-size: 1.1em;
 }
 
