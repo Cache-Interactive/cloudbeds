@@ -60,12 +60,15 @@ ul li a {
 }
 
 section, section#applications .wrap .applications-section {
-    height: 85vh;
     min-height: 750px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     position: relative;
+}
+
+section#applications {
+    height: auto;
 }
 
 div#applications-menu-container h3, nav#applications-menu {
