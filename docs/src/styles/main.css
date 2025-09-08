@@ -132,6 +132,7 @@ div#applications-menu-container {
     padding: 20px 15px;
     margin: -20px -15px;
     overflow: hidden;
+    z-index: 1;
 }
 
 img#lava-lamp {
