@@ -59,6 +59,14 @@ ul li a {
     text-transform: uppercase;
 }
 
+a {
+    transition: opacity 0.25s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
 section, section#applications .wrap .applications-section {
     min-height: 750px;
     display: flex;
