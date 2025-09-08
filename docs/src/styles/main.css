@@ -72,7 +72,7 @@ div#applications-menu-container h3, nav#applications-menu {
     display: inline-block;
 }
 
-div#applications-menu-container h2:after {
+div#applications-menu-container h3:after {
     content: '';
     width: 16px;
     height: 16px;
