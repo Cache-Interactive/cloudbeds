@@ -14,15 +14,15 @@ h1, .h1 {
     font-size: 2.75em;
 }
 
-h2 {
+h3.h2 {
     text-transform: uppercase;
 }
 
-h2, p.callout {
+h3.h2, p.callout {
     font-size: 1.1em;
 }
 
-h3 {
+h4 {
     font-size: 1.15em;
 }
 
@@ -56,10 +56,12 @@ ul li a {
 }
 
 section, section#applications .wrap .applications-section {
-    min-height: 85vh;
+    height: 85vh;
+    min-height: 750px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 div#applications-menu-container h2, nav#applications-menu {
@@ -88,12 +90,12 @@ nav#main-menu {
     transform: rotate(90deg);
 }
 
-h2.divider-title {
+.divider-title {
     margin-bottom: 100px;
     position: relative;
 }
 
-h2.divider-title:after, div#applications-menu-container:after {
+.divider-title:after, div#applications-menu-container:after {
     content: '';
     position: absolute;
     left: 15px;
@@ -105,7 +107,7 @@ h2.divider-title:after, div#applications-menu-container:after {
     background: #1e1e1e;
 }
 
-h2.divider-title span, div#applications-menu-container > div {
+.divider-title span, div#applications-menu-container > div {
     background: #f0e8d5;
     padding-right: 30px;
     position: relative;
@@ -121,4 +123,10 @@ div#applications-menu-container {
     padding: 20px 15px;
     margin: -20px -15px;
     overflow: hidden;
+}
+
+img#lava-lamp {
+    position: absolute;
+    right: 10vw;
+    bottom: 0;
 }
