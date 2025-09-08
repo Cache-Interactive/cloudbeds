@@ -86,8 +86,10 @@ div#applications-menu-container h2:after {
 
 nav#main-menu {
     position: absolute;
-    right: 0;
+    top: 85%;
+    right: 5vw;
     transform: rotate(90deg);
+    transform-origin: right;
 }
 
 .divider-title {
@@ -127,7 +129,7 @@ div#applications-menu-container {
 
 img#lava-lamp {
     position: absolute;
-    right: 10vw;
+    right: 3.5vw;
     bottom: 0;
 }
 
