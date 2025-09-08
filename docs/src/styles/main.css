@@ -158,3 +158,21 @@ h1 img {
     font-size: 1.25em;
     line-height: 1.75;
 }
+
+section#github a {
+    text-decoration: none;
+    color: #1e1e1e;
+    font-weight: 600;
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+}
+
+section#github a:after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(/cloudbeds/docs/src/images/arrow-right-long-regular-full.svg) center/contain no-repeat;
+    margin-left: 10px;
+}
