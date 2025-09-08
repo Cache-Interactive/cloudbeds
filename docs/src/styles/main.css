@@ -130,3 +130,7 @@ img#lava-lamp {
     right: 10vw;
     bottom: 0;
 }
+
+h1 img {
+    max-width: 136px;
+}
