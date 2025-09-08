@@ -68,7 +68,7 @@ section, section#applications .wrap .applications-section {
     position: relative;
 }
 
-div#applications-menu-container h2, nav#applications-menu {
+div#applications-menu-container h3, nav#applications-menu {
     display: inline-block;
 }
 
