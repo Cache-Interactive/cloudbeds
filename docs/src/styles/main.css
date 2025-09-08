@@ -134,3 +134,9 @@ img#lava-lamp {
 h1 img {
     max-width: 136px;
 }
+
+#hero p {
+    margin-top: 60px;
+    font-size: 1.25em;
+    line-height: 1.75;
+}
