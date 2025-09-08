@@ -14,16 +14,20 @@ h1, .h1 {
     font-size: 2.75em;
 }
 
-h3.h2 {
+h3 {
     text-transform: uppercase;
 }
 
-h3.h2, p.callout {
+h3, p.callout {
     font-size: 1.1em;
 }
 
 h4 {
     font-size: 1.15em;
+}
+
+p {
+    line-height: 1.75;
 }
 
 .wrap {
