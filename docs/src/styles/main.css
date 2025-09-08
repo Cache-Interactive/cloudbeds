@@ -176,3 +176,12 @@ section#github a:after {
     background: url(/cloudbeds/docs/src/images/arrow-right-long-regular-full.svg) center/contain no-repeat;
     margin-left: 10px;
 }
+
+footer h2.h1, footer p, footer a {
+    color: #f0e8d5;
+}
+
+footer {
+    background: #1e1e1e;
+    padding: 50px 15px;
+}
