@@ -2,9 +2,17 @@
     body {
         padding: 60px 65px;
     }
-    
+
     .wrap {
         max-width: 1200px;
+    }
+
+    img#lava-lamp {
+        right: 3.5vw;
+    }
+
+    nav#main-menu {
+        right: 5vw;
     }
 }
 

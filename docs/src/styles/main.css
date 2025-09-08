@@ -102,7 +102,7 @@ div#applications-menu-container h3:after {
 nav#main-menu {
     position: absolute;
     top: 88%;
-    right: 5vw;
+    right: -1.25vw;
     transform: rotate(90deg);
     transform-origin: right;
 }
@@ -145,7 +145,7 @@ div#applications-menu-container {
 
 img#lava-lamp {
     position: absolute;
-    right: 3.5vw;
+    right: 0;
     bottom: 0;
 }
 
