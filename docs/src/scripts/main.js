@@ -1,29 +1,19 @@
 jQuery(document).ready(function($) {
     const $nav = $('#applications-menu-container');
-
     if (!$nav.length) return;
 
-    // Create IntersectionObserver to track when nav sticks
-    const observer = new IntersectionObserver(function(entries) {
-        const entry = entries[0];
-        
-        // Check if nav is stuck (at or near top and not intersecting viewport)
-        const isStuck = entry.boundingClientRect.top <= 1 && !entry.isIntersecting;
+    const navTop = $nav.offset().top;  // Original position from top of document
 
-        if (isStuck) {
+    $(window).on('scroll', function () {
+        const scrollTop = $(window).scrollTop();
+
+        // Toggle sticky nav class
+        if (scrollTop >= navTop) {
             $nav.addClass('sticky');
         } else {
             $nav.removeClass('sticky');
         }
-    }, {
-        root: null,
-        threshold: [1],
-    });
 
-    // Observe the nav element (get raw DOM element with [0])
-    observer.observe($nav[0]);
-
-    $(window).on('scroll', function () {
         // Get the first .applications-section element
         let firstSection = $('.applications-section').first()[0];
         if (!firstSection) return; // Exit if no sections found
