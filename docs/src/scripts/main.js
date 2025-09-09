@@ -1,5 +1,20 @@
 jQuery(document).ready(function($) {
     $(window).on('scroll', function () {
+        // Get the first .applications-section element
+        let firstSection = $('.applications-section').first()[0];
+        if (!firstSection) return; // Exit if no sections found
+
+        // Get the distance from the top of the viewport to the first section's top edge
+        let firstSectionTop = firstSection.getBoundingClientRect().top;
+
+        // If the first section is below 25% of the viewport height,
+        // it means we've scrolled above it -> remove all nav highlights and exit early
+        if (firstSectionTop > window.innerHeight * 0.25) {
+            $('#applications-menu a').removeClass('in-view');
+            return;
+        }
+        
+        // Track if we've found a visible section
         let found = false;
         $('.applications-section').each(function () {
             let rect = this.getBoundingClientRect();
@@ -28,11 +43,6 @@ jQuery(document).ready(function($) {
 
                 // Add .in-view to the current section's nav link
                 $('#applications-menu a[href="#' + elementID + '"]').addClass('in-view');
-            }
-
-            // If no section is in view, remove all nav highlights
-            if (!found) {
-                $('#applications-menu a').removeClass('in-view');
             }
         });
     });
