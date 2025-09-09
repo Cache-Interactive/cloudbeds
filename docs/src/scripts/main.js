@@ -29,6 +29,11 @@ jQuery(document).ready(function($) {
                 // Add .in-view to the current section's nav link
                 $('#applications-menu a[href="#' + elementID + '"]').addClass('in-view');
             }
+
+            // If no section is in view, remove all nav highlights
+            if (!found) {
+                $('#applications-menu a').removeClass('in-view');
+            }
         });
     });
 });
