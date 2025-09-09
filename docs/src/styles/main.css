@@ -112,7 +112,7 @@ nav#main-menu {
     position: relative;
 }
 
-.divider-title:after, div#applications-menu-container:after {
+.divider-title:after, div#applications-menu-container .wrap:after {
     content: '';
     position: absolute;
     left: 15px;
@@ -124,7 +124,7 @@ nav#main-menu {
     background: #1e1e1e;
 }
 
-.divider-title span, div#applications-menu-container > div {
+.divider-title span, div#applications-menu-container > .wrap > div {
     background: #f0e8d5;
     padding-right: 30px;
     position: relative;
@@ -139,8 +139,28 @@ div#applications-menu-container {
     background: #f0e8d5;
     padding: 20px 15px;
     margin: -20px -15px;
-    overflow: hidden;
     z-index: 1;
+}
+
+div#applications-menu-container:before {
+    content: '';
+    display: block;
+    width: calc(100% + 145px);
+    height: 1px;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 -65px;
+    transition: background-color 0.25s ease;
+}
+
+div#applications-menu-container.sticky:before {
+    background-color: #e3d4b0;
+}
+
+div#applications-menu-container .wrap {
+    position: relative;
 }
 
 ul li a.in-view {
