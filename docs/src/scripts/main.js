@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
         let triggerPoint = window.innerHeight || $(window).height();
         $('.applications-section').each(function () {
             let rect = this.getBoundingClientRect();
-            let elementMid = rect.top + (rect.height / 2);
+            let elementMid = rect.top + (rect.height / 3);
 
             let inView = elementMid < triggerPoint && rect.bottom > 0;
 
