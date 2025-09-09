@@ -14,9 +14,9 @@ jQuery(document).ready(function($){
 
             $(this).toggleClass('in-view', inView);
 
-            // Toggle .active within corresponding Applications nav menu
+            // Toggle .in-view on the matching nav link via href
             let elementID = $(this).attr('id');
-            $('.' + elementID).toggleClass('in-view', inView);
+            $('#applications-menu a[href="#' + elementID + '"]').toggleClass('in-view', inView);
         });
     });
 });
