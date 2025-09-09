@@ -13,6 +13,10 @@ jQuery(document).ready(function($){
             let inView = visibleHeight >= (0.75 * elementHeight) && rect.bottom > 0 && rect.top < window.innerHeight;
 
             $(this).toggleClass('in-view', inView);
+
+            // Toggle .active within corresponding Applications nav menu
+            let elementID = $(this).attr('id');
+            $('.' + elementID).toggleClass('in-view', inView);
         });
     });
 });
