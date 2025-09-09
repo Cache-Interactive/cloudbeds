@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
     $(window).on('scroll', function () {
+        let triggerPoint = window.innerHeight || $(window).height();
         $('.applications-section').each(function () {
             let rect = this.getBoundingClientRect();
             let elementMid = rect.top + (rect.height / 2);
