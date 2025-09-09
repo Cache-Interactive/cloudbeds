@@ -143,6 +143,10 @@ div#applications-menu-container {
     z-index: 1;
 }
 
+ul li a.in-view {
+    font-weight: 600;
+}
+
 img#lava-lamp {
     position: absolute;
     right: 0;
