@@ -22,9 +22,9 @@ jQuery(document).ready(function($) {
             var connectTop = connect.offset().top;
 
             if (scrollTop >= connectTop) {
-                nav.addClass('fixed');
+                nav.addClass('fade-out');
             } else {
-                nav.removeClass('fixed');
+                nav.removeClass('fade-out');
             }
         }
 
