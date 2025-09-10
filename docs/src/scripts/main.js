@@ -18,6 +18,8 @@ jQuery(document).ready(function($) {
             } else {
                 nav.removeClass('fixed');
             }
+
+            console.log('scrollMiddle:', scrollMiddle, 'h3Middle:', h3Middle);
         }
 
         $(window).on('load', function () {
