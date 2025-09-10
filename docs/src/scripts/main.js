@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        var overview = $('#overview');
+        var overview = $('#overview h3');
         var nav = $('nav#main-menu');
 
         function checkScroll() {
