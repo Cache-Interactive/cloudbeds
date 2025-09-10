@@ -15,6 +15,20 @@ jQuery(document).ready(function($) {
             } else {
                 nav.removeClass('fixed');
             }
+
+            // Detect if Connect is in view, add/remove fade-out class
+            var connect = $('#connect');  // The div you want to detect in view
+            var scrollTop = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var elementTop = connect.offset().top;
+            var elementBottom = elementTop + connect.outerHeight();
+
+            // Check if the element is in the viewport
+            if ((elementTop < (scrollTop + windowHeight)) && (elementBottom > scrollTop)) {
+                nav.addClass('fade-out');
+            } else {
+                nav.removeClass('fade-out');
+            }
         }
 
         checkScroll();
