@@ -20,8 +20,10 @@ jQuery(document).ready(function($) {
             // Fade out nav when top of Connect is in view,
             // fade back in when it is not not in view
             var connectTop = connect.offset().top;
+            var connectBottom = connectTop + connect.outerHeight();
+            var windowBottom = scrollTop + $(window).height();
 
-            if (scrollTop >= connectTop) {
+            if (windowBottom > connectTop && scrollTop < connectBottom) {
                 nav.addClass('fade-out');
             } else {
                 nav.removeClass('fade-out');
