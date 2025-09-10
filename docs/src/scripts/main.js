@@ -3,17 +3,6 @@ jQuery(document).ready(function($) {
     $(function () {
         var overview = $('#overview');
         var nav = $('nav#main-menu');
-        var connect = $('#connect');
-
-        function isInViewport($elem) {
-            var elementTop = $elem.offset().top;
-            var elementBottom = elementTop + $elem.outerHeight();
-            var viewportTop = $(window).scrollTop();
-            var viewportBottom = viewportTop + $(window).height();
-
-            // Returns true if any part of the element is visible in the viewport
-            return elementBottom > viewportTop && elementTop < viewportBottom;
-        }
 
         function checkScroll() {
             var overviewTop = overview.offset().top - 50;
@@ -25,14 +14,6 @@ jQuery(document).ready(function($) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
-            }
-
-            // Fade out nav when top of Connect is in view,
-            // fade back in when it is not not in view
-            if (isInViewport(connect)) {
-                nav.addClass('fade-out');
-            } else {
-                nav.removeClass('fade-out');
             }
         }
 
