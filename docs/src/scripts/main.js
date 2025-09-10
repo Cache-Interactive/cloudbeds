@@ -1,8 +1,35 @@
 jQuery(document).ready(function($) {
+    // MAIN NAV MENU
+    $(function () {
+        var $el = $('nav#main-menu');
+
+        function isInViewport(el) {
+            const rect = el[0].getBoundingClientRect();
+            return ( rect.top < window.innerHeight && rect.bottom > 0 );
+        }
+
+        function navVisibility() {
+            if (isInViewport($el)) {
+                $el.addClass('fixed');
+            } else {
+                $el.removeClass('fixed');
+            }
+        }
+
+        navVisibility();
+
+        $(window).on('scroll', function () {
+            navVisibility();
+        });
+    });
+
+    // APPLICATIONS NAV MENU
+    // Add sticky class when menu is in view
+    // Add in-view class to nav menu item when its section is in view
     const $nav = $('#applications-menu-container');
     if (!$nav.length) return;
 
-    const navTop = $nav.offset().top;  // Original position from top of document
+    const navTop = $nav.offset().top;
 
     $(window).on('scroll', function () {
         const scrollTop = $(window).scrollTop();
@@ -22,7 +49,7 @@ jQuery(document).ready(function($) {
         let firstSectionTop = firstSection.getBoundingClientRect().top;
 
         // If the first section is below 25% of the viewport height,
-        // it means we've scrolled above it -> remove all nav highlights and exit early
+        // it means we've scrolled above it --> remove all nav highlights and exit early
         if (firstSectionTop > window.innerHeight * 0.25) {
             $('#applications-menu a').removeClass('in-view');
             return;
@@ -41,9 +68,6 @@ jQuery(document).ready(function($) {
 
             // Check if at least 75% of the element is visible
             let inView = visibleHeight >= (0.75 * elementHeight) && rect.bottom > 0 && rect.top < window.innerHeight;
-
-            // Toggle section's in-view class
-            $(this).toggleClass('in-view', inView);
 
             // If this is the first visible section and we haven't found one yet
             if (inView && !found) {
