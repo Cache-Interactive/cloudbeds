@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
             // fade back in when it is not not in view
             var connectTop = connect.offset().top;
 
-            if (scrollTop + windowHeight >= connectTop) {
+            if (scrollTop > 0 && scrollTop + windowHeight >= connectTop) {
                 nav.addClass('fade-out');
             } else {
                 nav.removeClass('fade-out');
