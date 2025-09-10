@@ -6,29 +6,18 @@ jQuery(document).ready(function($) {
 
         function checkScroll() {
             var scrollTop = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            var scrollMiddle = scrollTop + (windowHeight / 2);
-
             var h3Top = overviewH3.offset().top;
             var h3Height = overviewH3.outerHeight();
             var h3Middle = h3Top + (h3Height / 2);
 
-            if (scrollMiddle >= h3Middle) {
+            if (scrollTop >= h3Middle) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
             }
-
-            console.log('scrollMiddle:', scrollMiddle, 'h3Middle:', h3Middle);
         }
 
-        $(window).on('load', function () {
-            checkScroll();
-        });
-
-        $(window).on('scroll resize', function () {
-            checkScroll();
-        });
+        $(window).on('load scroll resize', checkScroll);
     });
 
     // APPLICATIONS NAV MENU
