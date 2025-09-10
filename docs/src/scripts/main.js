@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
             var overviewTop = overview.offset().top;
             var scrollTop = $(window).scrollTop();
 
-            if (scrollTop >= overviewTop) {
+            if (scrollTop >= overviewTop + 100) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
