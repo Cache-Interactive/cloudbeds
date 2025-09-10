@@ -1,24 +1,26 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        var overview = $('#overview h3');
-        var nav = $('nav#main-menu');
+        $(function () {
+            var nav = $('nav#main-menu');
+            var overviewH3 = $('#overview h3');
 
-        function checkScroll() {
-            var overviewTop = overview.offset().top;
-            var scrollTop = $(window).scrollTop();
+            function checkScroll() {
+                var scrollMiddle = $(window).scrollTop() + ($(window).height() / 2);
+                var h3Middle = overviewH3.offset().top + (overviewH3.outerHeight() / 2);
 
-            if (scrollTop >= overviewTop) {
-                nav.addClass('fixed');
-            } else {
-                nav.removeClass('fixed');
+                if (scrollMiddle >= h3Middle) {
+                    nav.addClass('fixed');
+                } else {
+                    nav.removeClass('fixed');
+                }
             }
-        }
 
-        checkScroll();
-
-        $(window).on('scroll', function () {
             checkScroll();
+
+            $(window).on('scroll', function () {
+                checkScroll();
+            });
         });
     });
 
