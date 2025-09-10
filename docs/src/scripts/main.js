@@ -24,9 +24,9 @@ jQuery(document).ready(function($) {
             var articleBottom = article.offset().top + article.outerHeight();
 
             if (scrollBottom >= articleBottom) {
-                article.addClass('fade-out');
+                nav.addClass('fade-out');
             } else {
-                article.removeClass('fade-out');
+                nav.removeClass('fade-out');
             }
         }
 
