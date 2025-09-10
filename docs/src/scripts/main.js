@@ -23,7 +23,7 @@ jQuery(document).ready(function($) {
             var connectTop = connect.offset().top;
             var connectBottom = connectTop + connect.outerHeight();
 
-            if (scrollTop + windowHeight >= connectTop && scrollTop <= connectBottom) {
+            if (scrollTop >= connectTop && scrollTop <= connectBottom) {
                 nav.stop(true, true).fadeOut();
             } else {
                 nav.stop(true, true).fadeIn();
