@@ -1,7 +1,8 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        var $el = $('nav#main-menu');
+        var overview = $('#overview');
+        var nav = $('nav#main-menu');
 
         function isInViewport(el) {
             const rect = el[0].getBoundingClientRect();
@@ -9,10 +10,10 @@ jQuery(document).ready(function($) {
         }
 
         function navVisibility() {
-            if (isInViewport($el)) {
-                $el.addClass('fixed');
+            if (isInViewport(overview)) {
+                nav.addClass('fixed');
             } else {
-                $el.removeClass('fixed');
+                nav.removeClass('fixed');
             }
         }
 
