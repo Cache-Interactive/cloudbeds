@@ -23,7 +23,9 @@ jQuery(document).ready(function($) {
             var connectTop = connect.offset().top;
             var connectBottom = connectTop + connect.outerHeight();
 
-            if (scrollTop >= connectTop && scrollTop <= connectBottom) {
+            var isConnectVisible = connectBottom > scrollTop && connectTop < scrollTop + windowHeight;
+
+            if (isConnectVisible) {
                 nav.addClass('fade-out');
             } else {
                 nav.removeClass('fade-out');
