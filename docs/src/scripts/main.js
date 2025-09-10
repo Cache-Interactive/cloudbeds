@@ -1,26 +1,25 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
+        var overview = $('#overview h3');
         var nav = $('nav#main-menu');
-        var overviewH3 = $('#overview h3');
 
         function checkScroll() {
+            var overviewTop = overview.offset().top;
             var scrollTop = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            var scrollMiddle = scrollTop + (windowHeight / 2);
 
-            var h3Top = overviewH3.offset().top;
-            var h3Height = overviewH3.outerHeight();
-            var h3Middle = h3Top + (h3Height / 2);
-
-            if (scrollMiddle >= h3Middle) {
+            if (scrollTop >= overviewTop) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
             }
         }
 
-        $(window).on('load scroll resize', checkScroll);
+        checkScroll();
+
+        $(window).on('scroll', function () {
+            checkScroll();
+        });
     });
 
     // APPLICATIONS NAV MENU
