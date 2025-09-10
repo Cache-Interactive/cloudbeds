@@ -105,6 +105,7 @@ nav#main-menu {
     right: -1.25vw;
     transform: rotate(90deg);
     transform-origin: right;
+    transition: opacity 0.25s ease;;
 }
 
 nav#main-menu.fixed {
@@ -112,6 +113,10 @@ nav#main-menu.fixed {
     top: 75%;
     right: 8.4vw;
     z-index: 2;
+}
+
+.fade-out {
+    opacity: 0;
 }
 
 .divider-title {
