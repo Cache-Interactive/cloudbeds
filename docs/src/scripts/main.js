@@ -6,11 +6,14 @@ jQuery(document).ready(function($) {
 
         function checkScroll() {
             var scrollTop = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var scrollMiddle = scrollTop + (windowHeight / 2);
+
             var h3Top = overviewH3.offset().top;
             var h3Height = overviewH3.outerHeight();
             var h3Middle = h3Top + (h3Height / 2);
 
-            if (scrollTop >= h3Middle) {
+            if (scrollMiddle >= h3Middle) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
