@@ -18,14 +18,11 @@ jQuery(document).ready(function($) {
                 nav.removeClass('fixed');
             }
 
-            // Fade out nav when top of #connect is in view,
-            // fade in when it is not not in view
+            // Fade out nav when top of Connect is in view,
+            // fade back in when it is not not in view
             var connectTop = connect.offset().top;
-            var connectBottom = connectTop + connect.outerHeight();
 
-            var isConnectVisible = connectBottom > scrollTop && connectTop < scrollTop + windowHeight;
-
-            if (isConnectVisible) {
+            if (scrollTop + windowHeight >= connectTop) {
                 nav.addClass('fade-out');
             } else {
                 nav.removeClass('fade-out');
