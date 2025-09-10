@@ -5,10 +5,10 @@ jQuery(document).ready(function($) {
         var nav = $('nav#main-menu');
 
         function checkScroll() {
-            var overviewTop = overview.offset().top;
+            var overviewTop = overview.offset().top + 100;
             var scrollTop = $(window).scrollTop();
 
-            if (scrollTop >= overviewTop + 100) {
+            if (scrollTop >= overviewTop) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
