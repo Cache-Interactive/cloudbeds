@@ -8,7 +8,6 @@ jQuery(document).ready(function($) {
         function checkScroll() {
             var overviewTop = overview.offset().top - 50;
             var scrollTop = $(window).scrollTop();
-            var windowHeight = $(window).height();
 
             // Add fixed class when scroll past Overview section,
             // remove fixed class when scroll up above it
@@ -22,10 +21,10 @@ jQuery(document).ready(function($) {
             // fade back in when it is not not in view
             var connectTop = connect.offset().top;
 
-            if (scrollTop > 0 && scrollTop + windowHeight >= connectTop) {
-                nav.addClass('fade-out');
+            if (scrollTop >= connectTop) {
+                nav.addClass('fixed');
             } else {
-                nav.removeClass('fade-out');
+                nav.removeClass('fixed');
             }
         }
 
