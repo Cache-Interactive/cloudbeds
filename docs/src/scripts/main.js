@@ -42,12 +42,10 @@ jQuery(document).ready(function($) {
 
             if (isNowInView && !hasEnteredView) {
                 hasEnteredView = true;
-                console.log('Top of div has entered the viewport!');
                 $('nav#main-menu').addClass('fade-out');
 
             } else if (!isNowInView && hasEnteredView) {
                 hasEnteredView = false;
-                console.log('Top of div is still below the viewport.');
                 $('nav#main-menu').removeClass('fade-out');
             }
         });
