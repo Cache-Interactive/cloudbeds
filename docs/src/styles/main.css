@@ -107,6 +107,13 @@ nav#main-menu {
     transform-origin: right;
 }
 
+nav#main-menu.fixed {
+    position: fixed;
+    top: 53.75%;
+    right: 8.4vw;
+    z-index: 2;
+}
+
 .divider-title {
     margin-bottom: 100px;
     position: relative;
