@@ -1,26 +1,31 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        $(function () {
-            var nav = $('nav#main-menu');
-            var overviewH3 = $('#overview h3');
+        var nav = $('nav#main-menu');
+        var overviewH3 = $('#overview h3');
 
-            function checkScroll() {
-                var scrollMiddle = $(window).scrollTop() + ($(window).height() / 2);
-                var h3Middle = overviewH3.offset().top + (overviewH3.outerHeight() / 2);
+        function checkScroll() {
+            var scrollTop = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            var scrollMiddle = scrollTop + (windowHeight / 2);
 
-                if (scrollMiddle >= h3Middle) {
-                    nav.addClass('fixed');
-                } else {
-                    nav.removeClass('fixed');
-                }
+            var h3Top = overviewH3.offset().top;
+            var h3Height = overviewH3.outerHeight();
+            var h3Middle = h3Top + (h3Height / 2);
+
+            if (scrollMiddle >= h3Middle) {
+                nav.addClass('fixed');
+            } else {
+                nav.removeClass('fixed');
             }
+        }
 
+        $(window).on('load', function () {
             checkScroll();
+        });
 
-            $(window).on('scroll', function () {
-                checkScroll();
-            });
+        $(window).on('scroll resize', function () {
+            checkScroll();
         });
     });
 
