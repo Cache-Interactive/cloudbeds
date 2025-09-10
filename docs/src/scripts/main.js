@@ -24,9 +24,9 @@ jQuery(document).ready(function($) {
             var connectBottom = connectTop + connect.outerHeight();
 
             if (scrollTop >= connectTop && scrollTop <= connectBottom) {
-                nav.stop(true, true).fadeOut();
+                nav.addClass('fade-out');
             } else {
-                nav.stop(true, true).fadeIn();
+                nav.removeClass('fade-out');
             }
         }
 
