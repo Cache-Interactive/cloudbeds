@@ -3,15 +3,27 @@ jQuery(document).ready(function($) {
     $(function () {
         var overview = $('#overview');
         var nav = $('nav#main-menu');
+        var contact = $('#contact');
 
         function checkScroll() {
             var overviewTop = overview.offset().top - 50;
             var scrollTop = $(window).scrollTop();
+            var contactTop = contact.offset().top;
+            var windowHeight = $(window).height();
 
+            // Add fixed class when scroll past Overview section,
+            // remove fixed class when scroll up above it
             if (scrollTop >= overviewTop) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
+            }
+
+            // Fade out nav when top of #contact is in view
+            if (scrollTop + windowHeight >= contactTop) {
+                nav.stop(true, true).fadeOut();
+            } else {
+                nav.stop(true, true).fadeIn();
             }
         }
 
