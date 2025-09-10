@@ -1,11 +1,11 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        var overview = $('#overview h3');
+        var overview = $('#overview');
         var nav = $('nav#main-menu');
 
         function checkScroll() {
-            var overviewTop = overview.offset().top;
+            var overviewTop = overview.offset().top - 50;
             var scrollTop = $(window).scrollTop();
 
             if (scrollTop >= overviewTop) {
