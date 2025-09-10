@@ -3,8 +3,6 @@ jQuery(document).ready(function($) {
     $(function () {
         var overview = $('#overview');
         var nav = $('nav#main-menu');
-        var article = $('article');
-        var header = $('header');
 
         function checkScroll() {
             var overviewTop = overview.offset().top - 50;
@@ -19,24 +17,9 @@ jQuery(document).ready(function($) {
             }
         }
 
-        // Detect if bottom of article container is reached, add/remove fade-out class on nav
-        function checkFadeOut() {
-            var combinedHeight = header.outerHeight(true) + article.outerHeight(true);
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-
-            if (scrollBottom >= combinedHeight) {
-                nav.addClass('fade-out');
-            } else {
-                nav.removeClass('fade-out');
-            }
-        }
-
         checkScroll();
-        checkFadeOut();
-
         $(window).on('scroll resize', function () {
             checkScroll();
-            checkFadeOut();
         });
     });
 
