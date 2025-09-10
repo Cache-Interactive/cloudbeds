@@ -9,9 +9,9 @@ jQuery(document).ready(function($) {
             var scrollTop = $(window).scrollTop();
 
             if (scrollTop >= overviewTop) {
-                nav.removeClass('fixed');
-            } else {
                 nav.addClass('fixed');
+            } else {
+                nav.removeClass('fixed');
             }
         }
 
