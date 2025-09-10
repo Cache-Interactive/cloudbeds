@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
     $(function () {
         var overview = $('#overview');
         var nav = $('nav#main-menu');
+        var article = $('article');
 
         function checkScroll() {
             var overviewTop = overview.offset().top - 50;
@@ -15,9 +16,10 @@ jQuery(document).ready(function($) {
             } else {
                 nav.removeClass('fixed');
             }
+        }
 
-            // Detect if bottom of article container is reached, add/remove fade-out class on nav
-            var article = $('article');
+        // Detect if bottom of article container is reached, add/remove fade-out class on nav
+        function checkFadeOut() {
             var scrollBottom = $(window).scrollTop() + $(window).height();
             var articleBottom = article.offset().top + article.outerHeight();
 
@@ -29,9 +31,11 @@ jQuery(document).ready(function($) {
         }
 
         checkScroll();
+        checkFadeOut();
 
         $(window).on('scroll resize', function () {
             checkScroll();
+            checkFadeOut();
         });
     });
 
