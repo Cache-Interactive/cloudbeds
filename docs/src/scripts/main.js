@@ -18,9 +18,40 @@ jQuery(document).ready(function($) {
         }
 
         checkScroll();
+        
         $(window).on('scroll resize', function () {
             checkScroll();
         });
+
+        // Add fade-out class to main nav menu when scroll past Connect section,
+        // remove fade-out class when scroll above it
+        let hasEnteredView = false;
+
+        function hasElementEnteredView($el) {
+            if (!$el.length) return false;
+
+            const rect = $el[0].getBoundingClientRect();
+            const viewportBottom = window.innerHeight || document.documentElement.clientHeight;
+
+            return rect.top <= viewportBottom;
+        }
+
+        $(window).on('scroll', function () {
+            const $myDiv = $('#connect');
+            const isNowInView = hasElementEnteredView($myDiv);
+
+            if (isNowInView && !hasEnteredView) {
+                hasEnteredView = true;
+                console.log('Top of div has entered the viewport!');
+                $('nav#main-menu').addClass('fade-out');
+
+            } else if (!isNowInView && hasEnteredView) {
+                hasEnteredView = false;
+                console.log('Top of div is still below the viewport.');
+                $('nav#main-menu').removeClass('fade-out');
+            }
+        });
+
     });
 
     // APPLICATIONS NAV MENU
