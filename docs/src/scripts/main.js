@@ -16,22 +16,16 @@ jQuery(document).ready(function($) {
                 nav.removeClass('fixed');
             }
 
-            // Detect if Connect is in view, add/remove fade-out class
-            setTimeout(function() {
-                var connect = $('#connect');
-                var scrollTop = $(window).scrollTop();
-                var windowHeight = $(window).height();
-                var elementTop = connect.offset().top;
-                var elementBottom = elementTop + connect.outerHeight();
+            // Detect if bottom of article container is reached, add/remove fade-out class on nav
+            var article = $('article');
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            var articleBottom = article.offset().top + article.outerHeight();
 
-                // Check if the element is in the viewport
-                if ((elementTop < (scrollTop + windowHeight)) && (elementBottom > scrollTop)) {
-                    nav.addClass('fade-out');
-                } else {
-                    nav.removeClass('fade-out');
-                }
-            }, 100);
-            
+            if (scrollBottom >= articleBottom) {
+                article.addClass('fade-out');
+            } else {
+                article.removeClass('fade-out');
+            }
         }
 
         checkScroll();
