@@ -4,23 +4,21 @@ jQuery(document).ready(function($) {
         var overview = $('#overview');
         var nav = $('nav#main-menu');
 
-        function isInViewport(el) {
-            const rect = el[0].getBoundingClientRect();
-            return ( rect.top < window.innerHeight && rect.bottom > 0 );
-        }
+        function checkScroll() {
+            var overviewTop = overview.offset().top;
+            var scrollTop = $(window).scrollTop();
 
-        function navVisibility() {
-            if (isInViewport(overview)) {
+            if (scrollTop >= overviewTop) {
                 nav.addClass('fixed');
             } else {
                 nav.removeClass('fixed');
             }
         }
 
-        navVisibility();
+        checkScroll();
 
         $(window).on('scroll', function () {
-            navVisibility();
+            checkScroll();
         });
     });
 
