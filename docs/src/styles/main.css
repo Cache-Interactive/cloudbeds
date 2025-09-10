@@ -109,7 +109,7 @@ nav#main-menu {
 
 nav#main-menu.fixed {
     position: fixed;
-    top: 53.75%;
+    top: 75%;
     right: 8.4vw;
     z-index: 2;
 }
