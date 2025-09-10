@@ -20,14 +20,13 @@ jQuery(document).ready(function($) {
 
         // Detect if bottom of article container is reached, add/remove fade-out class on nav
         function checkFadeOut() {
-            var scrollTop = article.scrollTop();
-            var articleHeight = article.innerHeight();
-            var scrollHeight = article[0].scrollHeight;
+            var articleBottom = article.offset().top + article.outerHeight();
+            var scrollBottom = $(window).scrollTop() + $(window).height();
 
-            if (scrollTop + articleHeight >= scrollHeight) {
+            if (scrollBottom >= articleBottom) {
                 nav.addClass('fade-out');
             } else {
-                nav.removeClass('ade-out');
+                nav.removeClass('fade-out');
             }
         }
 
