@@ -224,7 +224,7 @@ footer {
     margin: 0 auto;
 }
 
-div#jump-to a {
+#jump-to {
     display: block;
     transform: rotate(90deg);
     border: 2px solid #000000;
