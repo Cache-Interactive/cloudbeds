@@ -184,10 +184,24 @@ ul li a.in-view {
     font-weight: 600;
 }
 
-img#lava-lamp {
+#lava-lamp {
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+.lava-lamp-container, .lava-lamp {
+	overflow: hidden;
+	width: 48px;
+	height: 100px;
+}
+
+.lava-lamp {
+    position: relative;
+}
+
+.lava-lamp img {
+	max-width: unset;
 }
 
 h1 img {
