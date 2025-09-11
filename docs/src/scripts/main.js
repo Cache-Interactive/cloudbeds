@@ -1,27 +1,27 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        var overview = $('#overview');
-        var nav = $('nav#main-menu');
+        // var overview = $('#overview');
+        // var nav = $('nav#main-menu');
 
-        function checkScroll() {
-            var overviewTop = overview.offset().top - 50;
-            var scrollTop = $(window).scrollTop();
+        // function checkScroll() {
+        //     var overviewTop = overview.offset().top - 50;
+        //     var scrollTop = $(window).scrollTop();
 
-            // Add fixed class when scroll past Overview section,
-            // remove fixed class when scroll up above it
-            if (scrollTop >= overviewTop) {
-                nav.addClass('fixed');
-            } else {
-                nav.removeClass('fixed');
-            }
-        }
+        //     // Add fixed class when scroll past Overview section,
+        //     // remove fixed class when scroll up above it
+        //     if (scrollTop >= overviewTop) {
+        //         nav.addClass('fixed');
+        //     } else {
+        //         nav.removeClass('fixed');
+        //     }
+        // }
 
-        checkScroll();
+        // checkScroll();
         
-        $(window).on('scroll resize', function () {
-            checkScroll();
-        });
+        // $(window).on('scroll resize', function () {
+        //     checkScroll();
+        // });
 
         // Add fade-out class to main nav menu when scroll past Connect section,
         // remove fade-out class when scroll above it
@@ -195,4 +195,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   lavaAnimation();
+
+  ScrollTrigger.create({
+    trigger: "#connect", // The section that triggers the class change
+    start: "top bottom", // When the top of the section hits the center of the viewport
+    end: "bottom center", // When the bottom of the section leaves the center of the viewport
+    toggleClass: {
+        targets: "nav#main-menu", // The element to which the class will be added/removed
+        className: "fixed" // The class to add when active, remove when inactive
+    },
+    // Optional: Add markers for debugging
+    markers: true
+    });
 });
