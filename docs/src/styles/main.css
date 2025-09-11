@@ -105,7 +105,7 @@ nav#main-menu {
     right: -1.25vw;
     transform: rotate(90deg);
     transform-origin: right;
-    transition: opacity 0.25s ease;;
+    transition: opacity 0.35s ease;;
 }
 
 nav#main-menu.fixed {
