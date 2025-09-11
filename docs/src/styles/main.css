@@ -154,9 +154,10 @@ div#applications-menu-container {
     position: sticky;
     top: 0;
     background: #f0e8d5;
-    padding: 20px 15px;
-    margin: -20px -15px;
+    padding: 20px 0;
+    margin: -20px 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 div#applications-menu-container:before {
