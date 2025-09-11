@@ -1,55 +1,54 @@
 jQuery(document).ready(function($) {
     // MAIN NAV MENU
     $(function () {
-        // var overview = $('#overview');
-        // var nav = $('nav#main-menu');
+        var overview = $('#overview');
+        var nav = $('nav#main-menu');
 
-        // function checkScroll() {
-        //     var overviewTop = overview.offset().top - 50;
-        //     var scrollTop = $(window).scrollTop();
+        function checkScroll() {
+            var overviewTop = overview.offset().top - 50;
+            var scrollTop = $(window).scrollTop();
 
-        //     // Add fixed class when scroll past Overview section,
-        //     // remove fixed class when scroll up above it
-        //     if (scrollTop >= overviewTop) {
-        //         nav.addClass('fixed');
-        //     } else {
-        //         nav.removeClass('fixed');
-        //     }
-        // }
+            // Add fixed class when scroll past Overview section,
+            // remove fixed class when scroll up above it
+            if (scrollTop >= overviewTop) {
+                nav.addClass('fixed');
+            } else {
+                nav.removeClass('fixed');
+            }
+        }
 
-        // checkScroll();
+        checkScroll();
         
-        // $(window).on('scroll resize', function () {
-        //     checkScroll();
-        // });
+        $(window).on('scroll resize', function () {
+            checkScroll();
+        });
 
         // Add fade-out class to main nav menu when scroll past Connect section,
         // remove fade-out class when scroll above it
-        let hasEnteredView = false;
+        // let hasEnteredView = false;
 
-        function hasElementEnteredView($el) {
-            if (!$el.length) return false;
+        // function hasElementEnteredView($el) {
+        //     if (!$el.length) return false;
 
-            const rect = $el[0].getBoundingClientRect();
-            const viewportBottom = window.innerHeight || document.documentElement.clientHeight;
+        //     const rect = $el[0].getBoundingClientRect();
+        //     const viewportBottom = window.innerHeight || document.documentElement.clientHeight;
 
-            return rect.top <= viewportBottom;
-        }
+        //     return rect.top <= viewportBottom;
+        // }
 
-        $(window).on('scroll', function () {
-            const $myDiv = $('#connect');
-            const isNowInView = hasElementEnteredView($myDiv);
+        // $(window).on('scroll', function () {
+        //     const $myDiv = $('#connect');
+        //     const isNowInView = hasElementEnteredView($myDiv);
 
-            if (isNowInView && !hasEnteredView) {
-                hasEnteredView = true;
-                $('nav#main-menu').addClass('fade-out');
+        //     if (isNowInView && !hasEnteredView) {
+        //         hasEnteredView = true;
+        //         $('nav#main-menu').addClass('fade-out');
 
-            } else if (!isNowInView && hasEnteredView) {
-                hasEnteredView = false;
-                $('nav#main-menu').removeClass('fade-out');
-            }
-        });
-
+        //     } else if (!isNowInView && hasEnteredView) {
+        //         hasEnteredView = false;
+        //         $('nav#main-menu').removeClass('fade-out');
+        //     }
+        // });
     });
 
     // APPLICATIONS NAV MENU
@@ -202,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
     end: "bottom center", // When the bottom of the section leaves the center of the viewport
     toggleClass: {
         targets: "nav#main-menu", // The element to which the class will be added/removed
-        className: "fixed" // The class to add when active, remove when inactive
+        className: "fade-out" // The class to add when active, remove when inactive
     },
     // Optional: Add markers for debugging
     markers: true
