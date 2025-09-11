@@ -202,8 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleClass: {
         targets: "nav#main-menu", // The element to which the class will be added/removed
         className: "fade-out" // The class to add when active, remove when inactive
-    },
-    // Optional: Add markers for debugging
-    markers: true
+    }
     });
 });
