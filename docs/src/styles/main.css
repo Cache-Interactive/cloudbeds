@@ -232,6 +232,10 @@ footer p {
     font-size: 1.25em;
 }
 
+footer p:last-child {
+    margin-bottom: 0;
+}
+
 #jump-to {
     display: block;
     transform: rotate(90deg);
