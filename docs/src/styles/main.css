@@ -163,7 +163,7 @@ div#applications-menu-container {
 div#applications-menu-container:before {
     content: '';
     display: block;
-    width: calc(100% + 145px);
+    width: calc(100% + 130px);
     height: 1px;
     background-color: transparent;
     position: absolute;
