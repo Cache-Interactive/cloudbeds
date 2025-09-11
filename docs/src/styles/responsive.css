@@ -7,7 +7,7 @@
         max-width: 1200px;
     }
 
-    img#lava-lamp {
+    #lava-lamp {
         right: 3.75vw;
     }
 
@@ -42,6 +42,6 @@
 
 @media screen and (min-width: 768px) {
     footer p {
-        ax-width: 600px;
+        max-width: 600px;
     }
 }
