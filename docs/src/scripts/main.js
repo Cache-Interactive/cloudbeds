@@ -114,3 +114,85 @@ jQuery(document).ready(function($) {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  function lavaAnimation() {
+    const lavaTarget = document.querySelector(".lava-lamp-frames");
+    const lavaWrapper = document.querySelector(".lava-lamp");
+    if (!lavaTarget || !lavaWrapper) return;
+
+    const lavaSprite = {
+      width: 48,
+      height: 100,
+      total: 150,
+      cols: 20,
+      duration: 4
+    };
+
+    let frameData = { frame: 0 };
+
+    function updateFrame() {
+      const frame = Math.floor(frameData.frame);
+      const frameX = (frame % lavaSprite.cols) * -lavaSprite.width;
+      const frameY = Math.floor(frame / lavaSprite.cols) * -lavaSprite.height;
+
+      gsap.set(lavaTarget, {
+        x: frameX,
+        y: frameY
+      });
+    }
+
+    const lavaTL = gsap.timeline({ paused: true });
+
+    // First playthrough: linear
+    lavaTL.to(frameData, {
+      frame: lavaSprite.total - 1,
+      duration: lavaSprite.duration,
+      ease: "none",
+      onUpdate: updateFrame
+    });
+
+    // Reset frame to 0 before second playthrough
+    lavaTL.set(frameData, { frame: 0 });
+
+    // Second playthrough split into two parts:
+    // 85% linear
+    lavaTL.to(frameData, {
+      frame: (lavaSprite.total - 1) * 0.85,
+      duration: lavaSprite.duration * 0.85,
+      ease: "none",
+      onUpdate: updateFrame
+    });
+
+    // last 15% ease out
+    lavaTL.to(frameData, {
+      frame: lavaSprite.total - 1,
+      duration: lavaSprite.duration * 0.15,
+      ease: "cubic-bezier(0.4, 0.4, 0.6, 1)",
+      onUpdate: updateFrame
+    });
+
+    // Trigger on scroll into view (play once)
+    ScrollTrigger.create({
+      trigger: lavaWrapper,
+      start: "top bottom",
+      end: "bottom center",
+      once: true,
+      onEnter: () => {
+        if (!lavaTL.isActive()) lavaTL.restart();
+      }
+    });
+
+    // Trigger again on mouseenter
+    lavaTarget.addEventListener("mouseenter", () => {
+      if (!lavaTL.isActive()) {
+        frameData.frame = 0; // reset manually
+        lavaTL.restart();
+      }
+    });
+  }
+
+  lavaAnimation();
+});
