@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   ScrollTrigger.create({
     trigger: "#connect", // The section that triggers the class change
-    start: "top bottom", // When the top of the section hits the center of the viewport
+    start: "top bottom", // When the top of the section hits the bottom of the viewport
     end: "bottom center", // When the bottom of the section leaves the center of the viewport
     toggleClass: {
         targets: "nav#main-menu", // The element to which the class will be added/removed
