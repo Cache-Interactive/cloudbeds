@@ -103,22 +103,6 @@ div#applications-menu-container h3:after {
     max-width: 100%;
 }
 
-nav#main-menu {
-    position: absolute;
-    top: 88%;
-    right: -1.25vw;
-    transform: rotate(90deg);
-    transform-origin: right;
-    transition: opacity 0.35s ease;;
-}
-
-nav#main-menu.fixed {
-    position: fixed;
-    top: 75%;
-    right: 8.4vw;
-    z-index: 2;
-}
-
 .fade-out {
     opacity: 0;
 }

@@ -25,6 +25,22 @@
 }
 
 @media screen and (min-width: 992px) {
+    nav#main-menu {
+        position: absolute;
+        top: 88%;
+        right: -1.25vw;
+        transform: rotate(90deg);
+        transform-origin: right;
+        transition: opacity 0.35s ease;;
+    }
+
+    nav#main-menu.fixed {
+        position: fixed;
+        top: 75%;
+        right: 8.4vw;
+        z-index: 2;
+    }
+
     section, section#applications .wrap .applications-section {
         min-height: 750px;
     }
@@ -50,6 +66,10 @@
 
     section, section#applications .wrap .applications-section {
         padding: 60px 0;
+    }
+
+    section#overview {
+        padding-bottom: 30px;
     }
 }
 
