@@ -77,6 +77,18 @@
     }
 }
 
+@media screen and (min-width: 850px) {
+    nav#applications-menu select {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 849px) {
+    nav#applications-menu ul {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 768px) {
     footer p {
         max-width: 600px;
