@@ -73,7 +73,6 @@ a:hover {
 }
 
 section, section#applications .wrap .applications-section {
-    min-height: 750px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
