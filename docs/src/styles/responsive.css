@@ -18,6 +18,12 @@
     }
 }
 
+@media screen and (min-width: 1030px) {
+    .applications-section .row > div:first-child {
+        padding-right: 85px;
+    }
+}
+
 @media screen and (min-width: 992px) {
     #hero h2 {
         max-width: 870px;
@@ -25,10 +31,6 @@
 
     #hero p {
         max-width: 450px;
-    }
-
-    .applications-section .row > div:first-child {
-        padding-right: 85px;
     }
 
     section#overview .row > div:first-child {
