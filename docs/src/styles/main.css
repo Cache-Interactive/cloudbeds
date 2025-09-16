@@ -72,6 +72,16 @@ a:hover {
     opacity: 0.7;
 }
 
+.screen-reader-only {
+    left: -999px;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+}
+
 section, section#applications .wrap .applications-section {
     display: flex;
     align-items: center;
