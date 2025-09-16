@@ -69,6 +69,35 @@
 }
 
 @media screen and (max-width: 991px) {
+    select#nav-select {
+        width: 100%;
+        padding: 5px 10px;
+        border: none;
+        background: #f7f3e9;
+        appearance: none;
+        -webkit-appearance: none;
+    }
+
+    nav#applications-menu {
+        width: 76%;
+    }
+
+    nav#applications-menu:after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url(/cloudbeds/docs/src/images/chevron-right-regular-full.svg) center / contain no-repeat;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+        right: 20px;
+    }
+
+    div#applications-menu-container .wrap:after {
+        display: none;
+    }
+    
     nav#main-menu {
         padding: 30px 20px;
         margin: 20px 0 100px;
@@ -77,7 +106,8 @@
     }
 
     div#applications-menu-container > .wrap > div {
-        padding-right: 20px;
+        padding-right: 0px;
+        width: 100%;
     }
 
     section#hero {
