@@ -97,7 +97,7 @@
     select#nav-select {
         width: 100%;
         padding: 5px 10px;
-        border: none;
+        border: 1px solid #e3d4b0;
         background: #f7f3e9;
         appearance: none;
         -webkit-appearance: none;
