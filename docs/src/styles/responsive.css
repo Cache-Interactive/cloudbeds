@@ -103,10 +103,6 @@
         -webkit-appearance: none;
     }
 
-    nav#applications-menu {
-        width: calc(100% - 177px);
-    }
-
     nav#applications-menu:after {
         content: '';
         width: 16px;
@@ -146,5 +142,44 @@
     section#github {
         padding-top: 0;
         margin-bottom: 60px;
+    }
+}
+
+@media screen and (min-width: 431px) and (max-width: 849px) { 
+    nav#applications-menu {
+        width: calc(100% - 177px);
+    }
+}
+
+@media screen and (min-width: 431px) {
+    div#applications-menu-container h3, nav#applications-menu {
+        display: inline-block;
+    }
+
+    div#applications-menu-container h3:after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: url(/cloudbeds/docs/src/images/chevron-right-regular-full.svg) center/contain no-repeat;
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    div#applications-menu-container h3 {
+        position: relative;
+    }
+
+    #applications-menu-container h3:after {
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        width: calc(100% - 15px);
+        height: 1px;
+        background: #1e1e1e;
     }
 }

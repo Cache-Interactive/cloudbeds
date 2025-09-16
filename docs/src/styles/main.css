@@ -93,19 +93,6 @@ section#applications {
     height: auto;
 }
 
-div#applications-menu-container h3, nav#applications-menu {
-    display: inline-block;
-}
-
-div#applications-menu-container h3:after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    background: url(/cloudbeds/docs/src/images/chevron-right-regular-full.svg) center/contain no-repeat;
-    margin: 0 15px;
-}
-
 #overview img, #applications img {
     border-radius: 15px;
     box-shadow: 0px 2px 8px 1px rgb(165 158 143 / 40%);
@@ -169,6 +156,10 @@ div#applications-menu-container.sticky:before {
 }
 
 div#applications-menu-container .wrap {
+    position: relative;
+}
+
+nav#applications-menu {
     position: relative;
 }
 
