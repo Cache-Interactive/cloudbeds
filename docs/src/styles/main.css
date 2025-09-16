@@ -148,8 +148,9 @@ div#applications-menu-container:before {
     height: 1px;
     background-color: transparent;
     position: absolute;
-    left: 0;
+    left: 50%;
     bottom: 0;
+    transform: translateX(-50%);
     transition: background-color 0.25s ease;
 }
 
