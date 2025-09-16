@@ -69,6 +69,13 @@
 }
 
 @media screen and (max-width: 991px) {
+    nav#main-menu {
+        padding: 30px 20px;
+        margin: 20px 0 50px;
+        background: #f7f3e9;
+        text-align: center;
+    }
+
     div#applications-menu-container > .wrap > div {
         padding-right: 20px;
     }
