@@ -79,7 +79,7 @@
     }
 
     nav#applications-menu {
-        width: 76%;
+        width: calc(100% - 177px);
     }
 
     nav#applications-menu:after {
