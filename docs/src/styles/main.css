@@ -145,13 +145,11 @@ div#applications-menu-container {
 div#applications-menu-container:before {
     content: '';
     display: block;
-    width: 100vw;
     height: 1px;
     background-color: transparent;
     position: absolute;
     left: 0;
     bottom: 0;
-    margin: 0 -30px;
     transition: background-color 0.25s ease;
 }
 

@@ -16,6 +16,16 @@
     #lava-lamp {
         right: 3.75vw;
     }
+
+    div#applications-menu-container:before {
+        width: calc(100% + 130px);
+    }
+}
+
+@media screen and (max-width: 1239px) {
+    div#applications-menu-container:before {
+        width: calc(100% + 30px);
+    }
 }
 
 @media screen and (min-width: 1030px) {
