@@ -169,6 +169,15 @@
 @media screen and (max-width: 430px) {
     div#applications-menu-container h3 {
         position: relative;
+        margin-bottom: 20px !important;
+    }
+
+    div#applications-menu-container h3 span {
+        background: #f0e8d5;
+        padding-right: 30px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
     }
 
     #applications-menu-container h3:after {
