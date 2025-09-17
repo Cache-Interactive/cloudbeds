@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
     
     if (anchorId) {
       $('html, body').stop(true, true).animate({
-        scrollTop: $('#' + anchorId).offset().top
+        scrollTop: $('#' + anchorId).offset().top - 30
       }, 500);
     }
   });
