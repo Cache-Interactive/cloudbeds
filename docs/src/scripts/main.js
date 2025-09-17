@@ -87,13 +87,12 @@ jQuery(document).ready(function($) {
   });
 
   // Jump to anchor when user selects a select dropdown option
-  $('#nav-select').on('change', function (e) {
+  $('#nav-select').on('change', function () {
     var anchorId = $(this).val();        
     
     if (anchorId) {
-      e.preventDefault();
       $('html, body').stop(true, true).animate({
-        scrollTop: $(anchorId).offset().top
+        scrollTop: $('#' + anchorId).offset().top
       }, 500);
     }
   });
