@@ -88,12 +88,19 @@ jQuery(document).ready(function($) {
 
   // Jump to anchor when user selects a select dropdown option
   $('#nav-select').on('change', function () {
-    var anchorId = $(this).val();        
-    
+    var anchorId = $(this).val();
+
     if (anchorId) {
-      $('html, body').stop(true, true).animate({
-        scrollTop: $('#' + anchorId).offset().top - 30
-      }, 500);
+      var target = $('#' + anchorId);
+      if (target.length) {
+        var selectedIndex = this.selectedIndex;
+
+        var offset = (selectedIndex === 1) ? 60 : 30;
+
+        $('html, body').stop(true, true).animate({
+          scrollTop: target.offset().top - offset
+        }, 500);
+      }
     }
   });
 });
