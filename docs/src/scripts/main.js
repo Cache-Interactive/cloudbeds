@@ -91,7 +91,7 @@ jQuery(document).ready(function($) {
     var anchorId = $(this).val();
     if (anchorId) {
       $('html, body').animate({
-        scrollTop: $('#' + anchorId).offset().top
+        scrollTop: $(anchorId).offset().top
       }, 500);
     }
   });
