@@ -95,7 +95,7 @@ jQuery(document).ready(function($) {
       if (target.length) {
         var selectedIndex = this.selectedIndex;
 
-        var offset = (selectedIndex === 1) ? 60 : 30;
+        var offset = (selectedIndex === 1) ? 50 : 30;
 
         $('html, body').stop(true, true).animate({
           scrollTop: target.offset().top - offset
