@@ -87,10 +87,12 @@ jQuery(document).ready(function($) {
   });
 
   // Jump to anchor when user selects a select dropdown option
-  $('#nav-select').on('change', function () {
-    var anchorId = $(this).val();
+  $('#nav-select').on('change', function (e) {
+    var anchorId = $(this).val();        
+    
     if (anchorId) {
-      $('html, body').animate({
+      e.preventDefault();
+      $('html, body').stop(true, true).animate({
         scrollTop: $(anchorId).offset().top
       }, 500);
     }
