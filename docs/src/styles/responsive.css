@@ -191,4 +191,12 @@
         height: 1px;
         background: #1e1e1e;
     }
+
+    div#applications-menu-container {
+        transition: top 0.15s ease;
+    }
+
+    div#applications-menu-container.sticky {
+        top: -40px;
+    }
 }
