@@ -165,6 +165,10 @@
         margin-top: 30px;
     }
 
+    #lava-lamp {
+        right: 3.5vw;
+    }
+
     section#github {
         padding-top: 0;
         margin-bottom: 60px;
