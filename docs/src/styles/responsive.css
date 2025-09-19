@@ -169,6 +169,21 @@
     }
 }
 
+@media screen and (min-width: 431px) and (max-width: 767px) { 
+    h1, .h1 {
+        font-size: 2.5em;
+    }
+
+    body {
+        padding: 30px 15px;
+    }
+
+    #hero p {
+        margin-top: 30px;
+        font-size: 1.15em;
+    }
+}
+
 @media screen and (min-width: 431px) {
     div#applications-menu-container h3, nav#applications-menu {
         display: inline-block;
@@ -185,6 +200,14 @@
 }
 
 @media screen and (max-width: 430px) {
+    h1, .h1 {
+        font-size: 2.25em;
+    }
+
+    #hero p {
+        font-size: 1.em;
+    }
+ 
     div#applications-menu-container h3 {
         position: relative;
         margin-bottom: 20px !important;
