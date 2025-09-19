@@ -44,7 +44,6 @@
     nav#main-menu {
         position: fixed;
         top: 75%;
-        right: 8.4vw;
         z-index: 2;
         opacity: 0;
         transform: rotate(90deg);
