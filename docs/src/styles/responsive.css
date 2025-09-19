@@ -157,6 +157,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    body {
+        padding: 30px 15px;
+    }
+
     section#github {
         padding-top: 0;
         margin-bottom: 60px;
@@ -172,10 +176,6 @@
 @media screen and (min-width: 431px) and (max-width: 767px) { 
     h1, .h1 {
         font-size: 2.5em;
-    }
-
-    body {
-        padding: 30px 15px;
     }
 
     #hero p {
