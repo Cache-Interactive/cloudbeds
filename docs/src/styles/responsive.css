@@ -161,6 +161,10 @@
         padding: 30px 15px;
     }
 
+    #hero p {
+        margin-top: 30px;
+    }
+
     section#github {
         padding-top: 0;
         margin-bottom: 60px;
@@ -184,10 +188,6 @@
 }
 
 @media screen and (min-width: 431px) {
-     #hero p {
-        margin-top: 30px;
-    }
-
     div#applications-menu-container h3, nav#applications-menu {
         display: inline-block;
     }
