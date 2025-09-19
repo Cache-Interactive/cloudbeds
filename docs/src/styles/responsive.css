@@ -26,6 +26,18 @@
     }
 }
 
+@media screen and (max-width: 1399px) {
+    nav#main-menu {
+        left: -999px;
+        position: absolute;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        z-index: -999;
+    }
+}
+
 @media screen and (min-width: 1240px) {
     body {
         padding: 60px 65px;
