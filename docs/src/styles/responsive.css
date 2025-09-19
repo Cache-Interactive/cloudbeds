@@ -207,6 +207,10 @@
 }
 
 @media screen and (max-width: 430px) {
+    .divider-title {
+        margin-bottom: 40px; 
+    }
+
     h1, .h1 {
         font-size: 2.25em;
     }
