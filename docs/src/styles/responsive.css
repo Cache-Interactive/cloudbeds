@@ -36,19 +36,18 @@
 
 @media screen and (min-width: 992px) {
     nav#main-menu {
-        position: absolute;
-        top: 88%;
-        right: -1.25vw;
+        position: fixed;
+        top: 75%;
+        right: 8.4vw;
+        z-index: 2;
+        opacity: 0;
         transform: rotate(90deg);
         transform-origin: right;
         transition: opacity 0.35s ease;;
     }
 
     nav#main-menu.fixed {
-        position: fixed;
-        top: 75%;
-        right: 8.4vw;
-        z-index: 2;
+        opacity: 1;
     }
 
     section, section#applications .wrap .applications-section {
