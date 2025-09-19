@@ -34,9 +34,15 @@
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1699px) {
+@media screen and (min-width: 1500px) and (max-width: 1699px) {
     nav#main-menu {
         right: 8vw;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1499px) { 
+    nav#main-menu {
+        right: 5.75vw;
     }
 }
 
@@ -48,7 +54,7 @@
         opacity: 0;
         transform: rotate(90deg);
         transform-origin: right;
-        transition: opacity 0.35s ease;
+        transition: all 0.35s ease;
     }
 
     nav#main-menu.fixed {
