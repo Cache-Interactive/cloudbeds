@@ -34,13 +34,13 @@
     }
 }
 
-@media screen and (min-width: 1500px) and (max-width: 1699px) {
+@media screen and (min-width: 1600px) and (max-width: 1699px) {
     nav#main-menu {
         right: 8vw;
     }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1499px) { 
+@media screen and (min-width: 992px) and (max-width: 1599px) { 
     nav#main-menu {
         right: 5.75vw;
     }
