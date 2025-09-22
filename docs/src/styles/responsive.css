@@ -57,6 +57,10 @@
 }
 
 @media screen and (max-width: 1239px) {
+    footer {
+        max-width: 96%;
+    }
+    
     div#applications-menu-container:before {
         width: calc(100% + 30px);
     }
