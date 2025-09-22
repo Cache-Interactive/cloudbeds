@@ -112,6 +112,10 @@
 }
 
 @media screen and (max-width: 849px) {
+    html {
+        scroll-behavior: unset;
+    }
+
     nav#applications-menu ul {
         display: none;
     }
