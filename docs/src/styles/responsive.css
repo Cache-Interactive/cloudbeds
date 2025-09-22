@@ -102,6 +102,10 @@
 }
 
 @media screen and (min-width: 850px) {
+    html {
+        scroll-behavior: smooth;
+    }
+
     nav#applications-menu select {
         display: none;
     }
