@@ -185,6 +185,11 @@
         padding-top: 0;
         margin-bottom: 60px;
     }
+
+    div#applications-menu-container {
+        padding: 10px 0;
+        margin: -10px 0;
+    }
 }
 
 @media screen and (min-width: 431px) and (max-width: 849px) { 
