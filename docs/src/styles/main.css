@@ -1,5 +1,5 @@
 body {
-    background: #f0e8d5;
+    background: #ece4da;
     color: #1e1e1e;
     font-family: aktiv-grotesk, sans-serif;
     font-weight: 400;
@@ -118,7 +118,7 @@ section#applications {
 }
 
 .divider-title span, div#applications-menu-container > .wrap > div {
-    background: #f0e8d5;
+    background: #ece4da;
     padding-right: 30px;
     position: relative;
     z-index: 1;
@@ -129,7 +129,7 @@ div#applications-menu-container {
     width: 100%;
     position: sticky;
     top: 0;
-    background: #f0e8d5;
+    background: #ece4da;
     padding: 20px 0;
     margin: -20px 0;
     z-index: 1;
@@ -211,7 +211,7 @@ section#github a:after {
 }
 
 footer h2.h1, footer p, footer a {
-    color: #f0e8d5;
+    color: #ece4da;
 }
 
 footer {
